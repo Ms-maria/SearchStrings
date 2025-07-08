@@ -191,3 +191,44 @@ Thumbs.db
 
 # Cython debug symbols
 cython_debug/
+
+### Virtual Environment ###
+# Все компоненты venv (Windows/Linux)
+venv/
+.env/
+ENV/
+env/
+venv*/
+env.bak/
+venv.bak/
+pythonenv*/
+
+# Конкретные файлы виртуального окружения
+pyvenv.cfg
+*/Scripts/
+*/Scripts/*
+*/bin/
+*/bin/*
+
+### Python ###
+# Кэш интерпретатора
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Артефакты сборки и установки
+build/
+dist/
+*.egg-info/
+*.egg
+wheels/
+
+# Тесты и покрытие кода
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+### Системные файлы ###
+.DS_Store
+Thumbs.db
