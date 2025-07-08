@@ -1,117 +1,21 @@
-# PyCharm IDE
+### IDE ###
+# PyCharm
 .idea/
 *.iml
 *.ipr
 *.iws
-.idea_modules/
-
-# Virtual Environment
-venv/
-.env/
-venv*/
-ENV/
-
-# Python cache and compiled files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Database files
-*.db
-*.sqlite
-
-# Log files
-*.log
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# PyCharm project files
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/dictionaries
-.idea/vcs.xml
-.idea/jsLibraryMappings.xml
-.idea/dataSources.ids
-.idea/dataSources.xml
-.idea/sqlDataSources.xml
-.idea/dynamic.xml
-.idea/uiDesigner.xml
 
 # VSCode
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 # Spyder
 .spyproject/
 
-# PyCharm
-.idea/artifacts
-.idea/compiler.xml
-.idea/jarRepositories.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/runConfigurations/
-
 ### Python ###
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
 # Virtual environments
 venv/
 .env/
@@ -121,30 +25,37 @@ venv*/
 env.bak/
 venv.bak/
 pythonenv*/
+pyvenv.cfg
+*/Scripts/
+*/bin/
 
-# Distribution / packaging
+# Cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info
+*.egg
+.eggs/
+.pytest_cache/
+.hypothesis/
+.ipynb_checkpoints
+
+# Build and distribution
 build/
 develop-eggs/
 dist/
 downloads/
 eggs/
-.eggs/
 lib/
 lib64/
 parts/
 sdist/
 var/
 wheels/
-*.egg-info/
 .installed.cfg
-*.egg
 MANIFEST
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
+# Testing and coverage
 htmlcov/
 .tox/
 .nox/
@@ -154,30 +65,44 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
-.hypothesis/
-.pytest_cache/
 
-# Jupyter Notebook
-.ipynb_checkpoints
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Environments
+### Node/React ###
+node_modules/
+package-lock.json
+yarn.lock
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.pnp.*
+.eslintcache
+.prettierignore
+
+# Build artifacts
+build/
+dist/
+out/
+.next/
+
+# Environment variables
 .env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+.env.local
+.env.development
+.env.test
+.env.production
 
-# Database files
-*.db
-*.sqlite
-*.sqlite3
+# Application files
+/public/favicon.*
+/public/*.png
+/public/*.svg
+/reportWebVitals.js
+/setupTests.js
+*.lets.js
 
-# Log files
-*.log
-
-# OS generated files
+### System ###
 .DS_Store
 .DS_Store?
 ._*
@@ -186,49 +111,60 @@ venv.bak/
 ehthumbs.db
 Thumbs.db
 
-# PyPI credentials
+### Logs ###
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+### Database ###
+*.db
+*.sqlite
+*.sqlite3
+
+### Security ###
 .pypirc
 
-# Cython debug symbols
-cython_debug/
+### React-specific ignores ###
+# Тестовые файлы
+/src/*.test.js
+/src/setupTests.js
+/src/reportWebVitals.js
 
-### Virtual Environment ###
-# Все компоненты venv (Windows/Linux)
-venv/
-.env/
-ENV/
-env/
-venv*/
-env.bak/
-venv.bak/
-pythonenv*/
+# Автогенерируемые файлы (кроме package.json)
+package-lock.json
+yarn.lock
 
-# Конкретные файлы виртуального окружения
-pyvenv.cfg
-*/Scripts/
-*/Scripts/*
-*/bin/
-*/bin/*
+# Артефакты сборки
+/build/
+/.next/
+/out/
 
-### Python ###
-# Кэш интерпретатора
-__pycache__/
-*.py[cod]
-*$py.class
+### Node ###
+node_modules/
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.pnp.*
 
-# Артефакты сборки и установки
-build/
-dist/
-*.egg-info/
-*.egg
-wheels/
+### IDE ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-# Тесты и покрытие кода
-.coverage
-htmlcov/
-.pytest_cache/
-.tox/
+### Environment ###
+.env
+.env.local
+.env*.local
 
-### Системные файлы ###
-.DS_Store
-Thumbs.db
+# Тесты
+/src/*.test.js
+/src/setupTests.js
+/src/reportWebVitals.js
+
+# Автогенерируемые файлы
+package-lock.json
+yarn.lock
