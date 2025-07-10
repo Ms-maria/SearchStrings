@@ -6,8 +6,7 @@ FastAPI сервер для поиска шаблонов в DNA последо�
 
 1. Клонировать репозиторий:
 ```bash
-git clone https://github.com/Ms-maria/SearchStrings.git+
-cd pythonBackend
+git clone https://github.com/Ms-maria/SearchStrings.git
 ```
 
 2. Установить зависимости:
