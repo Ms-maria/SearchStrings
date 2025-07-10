@@ -40,24 +40,12 @@ const SearchForm = () => {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:8000/api/search', params, {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      
-      // Преобразуем данные для совместимости с фронтендом
-      const formattedResults = response.data.map(item => ({
-        ...item,
-        // Если matches - массив, оставляем как есть, иначе создаем массив из одного элемента
-        matches: Array.isArray(item.matches) ? item.matches : [item.matches]
-      }));
-      
-      setResults(formattedResults);
-    } catch (error) {
+        const response = await axios.post('http://localhost:8000/api/search', params);
+        setResults(response.data.results);} 
+    catch (error) {
       console.error("Ошибка поиска:", error);
-      setError(error.response?.data?.message || error.message || "Ошибка при выполнении поиска");
-    } finally {
+      setError(error.response?.data?.message || error.message || "Ошибка при выполнении поиска");} 
+    finally {
       setIsLoading(false);
     }
   };
