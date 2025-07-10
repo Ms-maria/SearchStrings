@@ -1,0 +1,5 @@
+1: ACTGACGT
+2: acTGtGAC
+3: CGTAGCTA
+4: tgactgac
+5: AAAACCCC
