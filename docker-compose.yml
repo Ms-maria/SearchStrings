@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: dna_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/src:/app/src
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app
+    command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+    networks:
+      - dna_network
+
+  frontend:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: dna_frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+      - /app/node_modules  # Изолируем node_modules
+    environment:
+      - NODE_ENV=development
+      - REACT_APP_API_URL=http://backend:8000  # Для API-запросов
+    depends_on:
+      - backend
+    networks:
+      - dna_network
+    stdin_open: true  # Для React
+    tty: true         # Для React
+
+networks:
+  dna_network:
+    driver: bridge
